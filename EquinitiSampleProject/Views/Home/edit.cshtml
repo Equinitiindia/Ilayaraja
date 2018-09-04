@@ -1,0 +1,63 @@
+﻿@model EquinitiSampleProject.Models.Application
+@{
+    ViewBag.Title = "edit";
+}
+<br /><br /><br />
+<form action="/home/edit/" id="edit" method="post">
+    <div>
+        <table>
+            <tr>
+                <td>
+                    Application Id
+                </td>
+                <td>
+                    @Html.HiddenFor(a => a.Id)
+                    @Html.TextBoxFor(a => a.ApplicationId)
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td>
+                    Type
+                </td>
+                <td>
+                    @Html.TextBoxFor(a => a.Type)
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td>
+                    Summary
+                </td>
+                <td>
+                    @Html.TextBoxFor(a => a.Summary)
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td>
+                    Amount
+                </td>
+                <td>
+                    @Html.TextBoxFor(a => a.Amount)
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit" value="Update"> Update </button>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+</form>

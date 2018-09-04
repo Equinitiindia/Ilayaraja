@@ -1,0 +1,58 @@
+﻿@model  List<EquinitiSampleProject.Models.Application>
+
+<div class="jumbotron">
+    <h2>Equiniti Sample Webapi</h2>
+</div>
+
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>
+                    <b>Application Id</b>
+                </td>
+                <td>
+                    <b> Type</b>
+                </td>
+                <td>
+                    <b> Summary</b>
+                </td>
+                <td>
+                    <b> Amount</b>
+                </td>
+                <td>
+                    <b>     Action</b>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Count > 0)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @(item.ApplicationId)
+                        </td>
+                        <td>
+                            @(item.Type)
+                        </td>
+                        <td>
+                            @(item.Summary)
+                        </td>
+                        <td>
+                            @(item.Amount)
+                        </td>
+                        <td>
+                            <a href="/home/edit/@item.Id">Edit</a>
+                            <a href="/home/delete/@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+            <tr></tr>
+        </tbody>
+    </table>
+</div>
+
